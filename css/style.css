@@ -1,0 +1,118 @@
+:root {
+  --color-primario: #0b3b8c;   
+  --color-oscuro: #06224f;     
+  --color-acento: #ce1126;    
+  --color-claro: #f4f6fa;    
+  --color-fondo: #012264;  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(6, 34, 79, 0.88), rgba(6, 34, 79, 0.88)),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 18px,
+      rgba(255, 255, 255, 0.04) 18px 20px
+    );
+  background-color: var(--color-oscuro);
+  background-attachment: fixed;
+}
+
+
+.barra-superior {
+  background: var(--color-oscuro);
+  color: white;
+  padding: 14px 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 4px solid var(--color-acento);
+}
+
+.tarjeta {
+  background: var(--color-claro);
+  padding: 30px;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+.tarjeta > * {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--color-primario);
+  border-bottom: 3px solid var(--color-acento);
+  padding-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #b8c2d4;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid var(--color-primario);
+}
+
+button {
+  padding: 12px;
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--color-fondo);
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+#resultado {
+  background: white;
+  border-left: 8px solid var(--color-primario);
+  border-radius: 6px;
+}
+
+#resultado:empty {
+  display: none;
+}
+
+#resultado p {
+  margin: 8px 12px;
+  line-height: 1.4;
+}
+
+#mapa {
+  height: 300px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--color-primario);
+}

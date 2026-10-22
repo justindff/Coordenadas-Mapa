@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <title>Buscar ubicacion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="barra-superior">BUSCADOR DE UBICACIÓN</header>
+    <main class="tarjeta">
+        <h1>Buscar Ubicación</h1>
+        <p>Ingresa unas coordenadas y te diré el lugar</p>
+
+        <form id="formulario">
+            <input type="number" id="latitud" placeholder="latitud (ej: -16.5)" step="any" required>
+            <input type="number" id="longitud" placeholder="longitud (ej: -68.1)" step="any" required>
+            <button type="submit" id="boton">Buscar</button>
+        </form>
+
+        <div id="resultado"></div>
+        <div id="mapa"></div>
+    </main>
+
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
